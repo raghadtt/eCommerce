@@ -1,0 +1,37 @@
+.Poster {
+    background-color: #f5bd07;
+    height: 55vh;
+    position: relative;
+    text-align: center;
+
+    &_content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.Poster p {
+    font-size: 4.5vw;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+}
+
+.Poster p p {
+    padding-bottom: 12%;
+    font-size: 2vw;
+    white-space: nowrap;
+}
+
+.PosterButtons {
+    text-decoration: 0;
+    color: white;
+    border: white solid 3px;
+    font-size: 1vw;
+    font-weight: bold;
+    margin: 2%;
+    padding: 1% 6% 1% 6%;
+}

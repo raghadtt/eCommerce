@@ -1,0 +1,66 @@
+.Container {
+    margin-left: 6%;
+    margin-right: 6%;
+}
+
+.Images {
+    display: flex;
+    justify-content: space-between;
+}
+
+img {
+    margin-top: 1%;
+    margin-bottom: 3%;
+    width: 32.5%;
+    height: 70vh;
+    object-fit: cover;
+}
+
+h3 {
+    text-decoration: line-through;
+    text-decoration-color: #f5bd07;
+    text-decoration-thickness: 5%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 6.5vw;
+    text-align: center;
+    height: 22vh;
+}
+
+.Product {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ShopAllButton {
+    text-decoration: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2vw;
+    text-align: center;
+    color: #f5bd07;
+    border: #f5bd07 solid 4px;
+    font-weight: bold;
+    padding: 1% 5% 1% 5%;
+    transition: color 2s;
+
+    &:hover {
+        color: white;
+        background-color: #f5bd07;
+    }
+}
+
+.ArrowButton {
+    text-decoration: 0;
+    font-size: 1.2vw;
+    text-align: center;
+    color: white;
+    background-color: #f5bd07;
+    border: #f5bd07 solid 4px;
+    font-weight: bold;
+    padding: 1%;
+    transition: color 2s;
+}
+
+.ShopAllButtonContainer{
+    margin: 6%;
+    text-align: center;
+}
