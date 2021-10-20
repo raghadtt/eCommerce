@@ -1,0 +1,42 @@
+.Header {
+    margin: 2%;
+    margin-left: 6%;
+    margin-right: 6%;
+    overflow: hidden;
+}
+
+.CartIcon {
+    font-size: 2vw;
+    vertical-align: middle;
+    color: black;
+    margin-left: 10%;
+}
+
+.HeaderPages {
+    text-decoration: 0;
+    padding-right: 1.8%;
+    font-size: 1.2vw;
+    vertical-align: middle;
+    color: black;
+    transition: color 0.5s;
+
+    &:hover {
+        color: gold;
+
+    }
+}
+
+.LogoButton {
+    background-color: black;
+    font-weight: bold;
+    color: white;
+    padding: 1%;
+    margin-right: 40%;
+    font-size: 1.5vw;
+    cursor: pointer;
+    transition: color 1s;
+
+    &:hover{
+        color: gold;
+    }
+}
