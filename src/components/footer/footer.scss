@@ -1,0 +1,20 @@
+@import "../../main.scss";
+
+.Footer {
+    background-color: rgba(0, 0, 0, 0.801);
+    margin: 2%;
+    margin-left: $siteMargin;
+    margin-right: $siteMargin;
+    height: 25vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.FooterSections {
+    color: white;
+    flex-basis: 35%;
+    text-decoration: none;
+    font-size: $font-small;
+    padding: 2%;
+    
+}

@@ -1,0 +1,54 @@
+@import "../../main.scss";
+
+.ProductBlock {
+    flex: 1 1 30%;
+    text-align: center;
+}
+
+.ImageBlock {
+    position: relative;
+
+    &:hover .HoverText {
+        display: block;
+        cursor: pointer;
+    }
+
+    &:hover .Image {
+        opacity: 0.7;
+        cursor: pointer;
+    }
+}
+
+.ImageBlockWithoutHover {
+    position: relative;
+}
+
+.Image {
+    margin-top: 0.5%;
+    width: $hundred-percent;
+    height: 40vh;
+    margin-bottom: 3%;
+    object-fit: contain;
+}
+
+.Price {
+    color: $siteColor;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: $font-small;
+    font-weight: bold;
+}
+
+.Title {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: $font-large;
+}
+
+.HoverText {
+    display: none;
+    position: absolute;
+    margin-top: -12%;
+    font-size: $font-medium;
+    align-items: center;
+    background-color: white ;
+    width: $hundred-percent;
+}
