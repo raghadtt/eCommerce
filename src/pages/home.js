@@ -9,13 +9,13 @@ import Popup from '../components/popup';
 import imagePoster1 from '../assets/images/1.jpg';
 import imagePoster2 from '../assets/images/2.jpg';
 import imagePoster3 from '../assets/images/3.jpg';
-import "./styles/home.scss";
+import "./styles/pages.scss";
 
 function Home() {
 
     const [products, setProducts] = useState([]);
     const [quickViewFlag, setQuickViewFlag] = useState(false);
-    const [productName, setProductName] = useState("");
+    const [productId, setProductId] = useState("");
 
     const url = "https://fakestoreapi.com/products?limit=6";
 
@@ -27,9 +27,9 @@ function Home() {
             })
     }
 
-    const handlePopup = (name) => {
+    const handlePopup = (id) => {
         setQuickViewFlag(!quickViewFlag);
-        setProductName(name);
+        setProductId(id);
     }
 
     const showProducts = () => {
@@ -39,14 +39,16 @@ function Home() {
                     name={item.title}
                     price={item.price}
                     photo={item.image}
+                    id={item.id}
                     handlePopup={handlePopup}
+                    category={"none"}
                 />
             );
         });
     }
 
     const showPopup = () => {
-        return <Popup toggle={handlePopup} title={productName} />
+        return <Popup toggle={handlePopup} id={productId} />
     }
 
     useEffect(() => {

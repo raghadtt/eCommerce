@@ -1,3 +1,4 @@
+import "./styles/pages.scss";
 
 function Cart() {
     return (

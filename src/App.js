@@ -10,9 +10,8 @@ import About from './pages/about';
 import contact from './pages/contact';
 import Electronics from './pages/electronics';
 import Cart from './pages/cart';
-import Shipping from './pages/shipping';
 import Policy from './pages/policy';
-import './App.css';
+import shoppingAll from './pages/shoppingAll';
 
 function App() {
   return (
@@ -24,10 +23,10 @@ function App() {
         <Route path="/women" component={Women} />
         <Route path="/jewelery" component={Jewelery} />
         <Route path="/electronics" component={Electronics} />
+        <Route path="/shoppingAll" component={shoppingAll} />
         <Route path="/about" component={About} />
         <Route path="/contact" component={contact} />
         <Route path="/cart" component={Cart} />
-        <Route path="/shipping" component={Shipping} />
         <Route path="/policy" component={Policy} />
       </Switch>
       <Footer />

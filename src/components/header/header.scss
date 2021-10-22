@@ -1,42 +1,44 @@
+@import "../../main.scss";
+
 .Header {
     margin: 2%;
-    margin-left: 6%;
-    margin-right: 6%;
+    margin-left: $siteMargin;
+    margin-right: $siteMargin;
     overflow: hidden;
 }
 
 .CartIcon {
-    font-size: 2vw;
+    font-size: $font-very-large;
     vertical-align: middle;
-    color: black;
+    color: $color-black;
     margin-left: 10%;
 }
 
 .HeaderPages {
     text-decoration: 0;
     padding-right: 1.8%;
-    font-size: 1.2vw;
+    font-size: $font-small;
     vertical-align: middle;
-    color: black;
+    color: $color-black;
     transition: color 0.5s;
 
     &:hover {
-        color: gold;
+        color: $siteColor;
 
     }
 }
 
 .LogoButton {
-    background-color: black;
+    background-color: $color-black;
     font-weight: bold;
-    color: white;
+    color: $color-white;
     padding: 1%;
     margin-right: 40%;
-    font-size: 1.5vw;
+    font-size: $font-large;
     cursor: pointer;
     transition: color 1s;
 
     &:hover{
-        color: gold;
+        color: $siteColor;
     }
 }

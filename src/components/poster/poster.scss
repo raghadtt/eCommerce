@@ -1,5 +1,7 @@
+@import "../../main.scss";
+
 .Poster {
-    background-color: #f5bd07;
+    background-color: $siteColor;
     height: 55vh;
     position: relative;
     text-align: center;
@@ -14,22 +16,22 @@
 
 .Poster p {
     font-size: 4.5vw;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: $siteFont;
     font-weight: bold;
-    color: white;
+    color: $color-white;
     margin: 0;
 }
 
 .Poster p p {
     padding-bottom: 12%;
-    font-size: 2vw;
+    font-size: $font-very-large;
     white-space: nowrap;
 }
 
 .PosterButtons {
     text-decoration: 0;
-    color: white;
-    border: white solid 3px;
+    color: $color-white;
+    border: $color-white solid 3px;
     font-size: 1vw;
     font-weight: bold;
     margin: 2%;

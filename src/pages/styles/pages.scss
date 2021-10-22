@@ -1,0 +1,89 @@
+@import "../../main.scss";
+
+.Container {
+    margin-left: $siteMargin;
+    margin-right: $siteMargin;
+}
+
+.Images {
+    display: flex;
+    justify-content: space-between;
+}
+
+img {
+    margin-top: 1%;
+    margin-bottom: 3%;
+    width: 32.5%;
+    height: 70vh;
+    object-fit: cover;
+}
+
+h3 {
+    text-decoration: line-through;
+    text-decoration-color: $siteColor;
+    text-decoration-thickness: 5%;
+    font-family: $siteFont;
+    font-size: 6.5vw;
+    text-align: center;
+    height: 22vh;
+}
+
+.Product {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ShopAllButton {
+    text-decoration: 0;
+    font-family: $siteFont;
+    font-size: $font-small;
+    text-align: center;
+    color: $siteColor;
+    border: $siteColor solid 4px;
+    font-weight: bold;
+    padding: 1% 5% 1% 5%;
+    transition: color 2s;
+
+    &:hover {
+        color: $color-white;
+        background-color: $siteColor;
+    }
+}
+
+.ArrowButton {
+    text-decoration: 0;
+    font-size: $font-small;
+    text-align: center;
+    color: $color-white;
+    background-color: $siteColor;
+    border: $siteColor solid 4px;
+    font-weight: bold;
+    padding: 1%;
+    transition: color 2s;
+}
+
+.ShopAllButtonContainer {
+    margin: $siteMargin;
+    text-align: center;
+}
+
+.ContactInfo {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20%;
+    margin-bottom: 10%;
+    font-size: $font-medium;
+
+    h4 {
+        color: $siteColor;
+    }
+}
+
+.Paragraphs {
+    font-size: $font-medium;
+    margin: 10%;
+    margin-top: 0;
+    text-align: center;
+}

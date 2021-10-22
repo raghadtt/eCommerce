@@ -1,38 +1,39 @@
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 import './footer.scss';
 
 function Footer() {
     return (
         <div className="Footer">
-            <Link
-                to="/contact"
+            <HashLink
+                to="/contact#top"
                 className="FooterSections">
                 <span>
                     Contact us
                 </span>
-            </Link>
-            <Link
-                to="/about"
+            </HashLink>
+            <HashLink
+                to="/about#top"
                 className="FooterSections">
                 <span>
                     About
                 </span>
-            </Link>
-            <Link
-                to="/shipping"
+            </HashLink>
+            <HashLink
+                to="/policy#shipping"
                 className="FooterSections">
                 <span >
-                    Shipping {"&"} Returns
+                    Shipping Policy
                 </span>
-            </Link>
-            <Link
-                to="/policy"
+            </HashLink>
+            <HashLink
+                to="/policy#return"
                 className="FooterSections">
                 <span >
-                    Store Policy
+                    Return Policy
                 </span>
-            </Link>
+            </HashLink>
         </div >
     );
 }
