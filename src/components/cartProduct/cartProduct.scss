@@ -1,0 +1,43 @@
+@import "../../main.scss";
+
+.CartProductBlock {
+    display: flex;
+}
+
+.CartImageBlockWithoutHover {
+    position: relative;
+    width: 12%;
+    margin-right: 2%;
+}
+
+.CartImage {
+    margin-top: 0.5%;
+    width: $hundred-percent;
+    height: 20vh;
+    margin-bottom: 3%;
+    object-fit: contain;
+}
+
+.Amount {
+    color: $siteColor;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: $font-small;
+    font-weight: bold;
+}
+
+.Total {
+    margin-left: auto;
+}
+
+.CartTitle {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: $font-medium;
+    text-decoration: 0;
+    color: $color-black;
+}
+
+.TitleBlock, .Total{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

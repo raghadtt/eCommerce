@@ -11,10 +11,11 @@
     font-size: $font-very-large;
     vertical-align: middle;
     color: $color-black;
-    margin-left: 10%;
+    cursor: pointer;
+    margin-left: 1%;
 }
 
-.HeaderPages {
+.HeaderPages, .Login {
     text-decoration: 0;
     padding-right: 1.8%;
     font-size: $font-small;
@@ -28,12 +29,16 @@
     }
 }
 
+.Login {
+    margin-left: 14%;
+}
+
 .LogoButton {
     background-color: $color-black;
     font-weight: bold;
     color: $color-white;
     padding: 1%;
-    margin-right: 40%;
+    margin-right: 30%;
     font-size: $font-large;
     cursor: pointer;
     transition: color 1s;
@@ -42,3 +47,12 @@
         color: $siteColor;
     }
 }
+
+.Badge{
+    position: relative;
+    float: right;
+    margin-top: -4.7%;
+    font-weight: bold;
+    color: red;
+    font-size: $font-small
+  }

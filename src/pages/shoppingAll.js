@@ -8,15 +8,11 @@ import "./styles/pages.scss";
 function ShoppingAll() {
 
     const [products, setProducts] = useState([]);
-
     const url = "https://fakestoreapi.com/products";
 
-    const getProducts = () => {
-        axios.get(url)
-            .then((response) => {
-                const data = response.data;
-                setProducts(data);
-            })
+    const getProducts = async () => {
+        const resp = await axios.get(url);
+        setProducts(resp.data);
     }
 
     const showProducts = () => {

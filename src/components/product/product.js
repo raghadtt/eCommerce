@@ -1,10 +1,27 @@
+import { useState, useEffect } from "react";
+
+import { Link } from "react-router-dom";
+import axios from "axios";
+
 import "./product.scss";
 
 function Product(props) {
 
+    const [productInfo, setProductInfo] = useState([]);
+    const url = 'https://fakestoreapi.com/products/' + props.id;
+
     const handlePopup = () => {
         props.handlePopup(props.id);
     }
+
+    const getProducts = async () => {
+        const resp = await axios.get(url);
+        setProductInfo(resp.data);
+    }
+
+    useEffect(() => {
+        getProducts()
+    });
 
     return (
         <div className="ProductBlock">
@@ -13,7 +30,7 @@ function Product(props) {
                     className="ImageBlock"
                     onClick={() => handlePopup()}>
                     <img
-                        src={props.photo}
+                        src={productInfo.image}
                         alt=""
                         className="Image" />
                     <div className="HoverText">
@@ -24,18 +41,25 @@ function Product(props) {
                 </div>
                 :
                 <div className="ImageBlockWithoutHover">
-                    <img
-                        src={props.photo}
-                        alt=""
-                        className="Image" />
+                    <Link to={{
+                        pathname: "/details",
+                        productProps: {
+                            id: props.id
+                        }
+                    }}>
+                        <img
+                            src={productInfo.image}
+                            alt=""
+                            className="Image" />
+                    </Link>
                 </div>
             }
             <div>
                 <p className="Title">
-                    {props.name}
+                    {productInfo.title}
                 </p>
                 <p className="Price">
-                    {props.price}{'$'}
+                    {productInfo.price}{'$'}
                 </p>
             </div>
         </div>

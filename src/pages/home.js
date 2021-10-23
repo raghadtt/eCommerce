@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 
 import Poster from '../components/poster';
 import Product from '../components/product';
@@ -11,20 +10,18 @@ import imagePoster2 from '../assets/images/2.jpg';
 import imagePoster3 from '../assets/images/3.jpg';
 import "./styles/pages.scss";
 
-function Home() {
+const axios = require('axios');
+
+function Home(props) {
 
     const [products, setProducts] = useState([]);
     const [quickViewFlag, setQuickViewFlag] = useState(false);
     const [productId, setProductId] = useState("");
-
     const url = "https://fakestoreapi.com/products?limit=6";
 
-    const getProducts = () => {
-        axios.get(url)
-            .then((response) => {
-                const data = response.data;
-                setProducts(data);
-            })
+    const getProducts = async () => {
+        const resp = await axios.get(url);
+        setProducts(resp.data);
     }
 
     const handlePopup = (id) => {
@@ -36,19 +33,12 @@ function Home() {
         return products.map((item) => {
             return (
                 <Product
-                    name={item.title}
-                    price={item.price}
-                    photo={item.image}
                     id={item.id}
                     handlePopup={handlePopup}
                     category={"none"}
                 />
             );
         });
-    }
-
-    const showPopup = () => {
-        return <Popup toggle={handlePopup} id={productId} />
     }
 
     useEffect(() => {
@@ -74,7 +64,7 @@ function Home() {
             </h3>
             <div className="Product">
                 {products && showProducts()}
-                {quickViewFlag && showPopup()}
+                {quickViewFlag && <Popup toggle={handlePopup} id={productId} />}
             </div>
             <div className="ShopAllButtonContainer">
                 <Link

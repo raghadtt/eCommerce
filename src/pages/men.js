@@ -8,24 +8,17 @@ import "./styles/pages.scss";
 function Men() {
 
     const [products, setProducts] = useState([]);
-
     const url = "https://fakestoreapi.com/products/category/men's clothing";
 
-    const getProducts = () => {
-        axios.get(url)
-            .then((response) => {
-                const data = response.data;
-                setProducts(data);
-            })
+    const getProducts = async () => {
+        const resp = await axios.get(url);
+        setProducts(resp.data);
     }
 
     const showProducts = () => {
         return products.map((item) => {
             return (
                 <Product
-                    name={item.title}
-                    price={item.price}
-                    photo={item.image}
                     id={item.id}
                     category={"men"}
                 />

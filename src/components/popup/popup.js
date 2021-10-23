@@ -9,28 +9,43 @@ import './popup.scss'
 function Popup(props) {
 
     const [productInfo, setProductInfo] = useState([]);
+    const [quantity, setQuantity] = useState(1);
+    var date = new Date().getDate();
+    var month = new Date().getMonth() + 1;
+    var year = new Date().getFullYear();
+    const url = 'https://fakestoreapi.com/products/' + props.id;
 
     const handleClickOnClose = () => {
         props.toggle();
     }
 
     const limitNum = (e) => {
-        if (e.target.value > 5) {
-            e.target.value = 5;
+        if (e.target.value === "") {
+            setQuantity("");
+        }
+        else if (e.target.value > 5) {
+            setQuantity(5);
             alert("You can't buy more than 5 items")
         }
         else if (e.target.value < 1) {
-            e.target.value = 1
+            setQuantity(1);
             alert("You can't buy less than 1 item")
+        }
+        else {
+            setQuantity(e.target.value);
         }
     }
 
+    const AddToCart = () => {
+    }
+
+    const getProducts = async () => {
+        const resp = await axios.get(url);
+        setProductInfo(resp.data);
+    }
+
     useEffect(() => {
-        axios.get('https://fakestoreapi.com/products/' + props.id)
-            .then((response) => {
-                const data = response.data;
-                setProductInfo(data);
-            })
+        getProducts()
     });
 
     return (
@@ -46,7 +61,10 @@ function Popup(props) {
                             src={productInfo.image}
                             className="QuickImg"
                             alt="" />
-                        <button className="AddToCart">
+                        <button
+                            className="AddToCart"
+                            onClick={AddToCart}
+                        >
                             Add to cart
                         </button>
                     </div>
@@ -86,6 +104,7 @@ function Popup(props) {
                                     min="1"
                                     max="5"
                                     className="Quantity"
+                                    value={quantity}
                                     onChange={limitNum} />
                             </label>
                         </div>

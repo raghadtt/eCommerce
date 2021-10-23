@@ -12,6 +12,8 @@ import Electronics from './pages/electronics';
 import Cart from './pages/cart';
 import Policy from './pages/policy';
 import shoppingAll from './pages/shoppingAll';
+import ProductDetails from './pages/productDetails';
+import Login from './pages/login';
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
         <Route path="/contact" component={contact} />
         <Route path="/cart" component={Cart} />
         <Route path="/policy" component={Policy} />
+        <Route path="/login" component={Login} />
+        <Route path="/details" component={ProductDetails} />
       </Switch>
       <Footer />
     </Router>

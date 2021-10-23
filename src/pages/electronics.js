@@ -11,21 +11,15 @@ function Electronics() {
 
     const url = "https://fakestoreapi.com/products/category/electronics";
 
-    const getProducts = () => {
-        axios.get(url)
-            .then((response) => {
-                const data = response.data;
-                setProducts(data);
-            })
+    const getProducts = async () => {
+        const resp = await axios.get(url);
+        setProducts(resp.data);
     }
 
     const showProducts = () => {
         return products.map((item) => {
             return (
                 <Product
-                    name={item.title}
-                    price={item.price}
-                    photo={item.image}
                     id={item.id}
                     category={"electronics"}
                 />
