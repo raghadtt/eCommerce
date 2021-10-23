@@ -1,0 +1,97 @@
+@import "../../main.scss";
+
+.Modal {
+    background-color: rgba(85, 85, 85, 0.75);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: $hundred-percent;
+    height: $hundred-percent;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+  &_content {
+    background-color: $color-white;
+    position: absolute;
+    width: 60%;
+    height: 80vh;
+    border-radius: 8px;
+    border: 1px solid $color-white;
+  }
+}
+
+.Close {
+  color: $color-black;
+  float: right;
+
+  &:hover {
+    color: $siteColor;
+    cursor: pointer;
+  }
+}
+
+.Info {
+    display: flex;
+    padding: 2%;
+}
+
+.ImgBlock {
+    flex-basis: 50%;
+    flex-grow: 0;
+	flex-shrink: 0;
+    margin-right: 10%;
+}
+
+.QuickImg {
+    width: $hundred-percent;
+    height: 50vh;
+    object-fit: scale-down;
+    border: rgb(179, 179, 176) solid 2px;
+    padding: 1%;
+}
+
+.QuickPrice {
+    color: $siteColor;
+    font-family: $siteFont;
+    font-size: $font-medium;
+    font-weight: bold;
+}
+
+.Size {
+    font-size: $font-medium;
+    font-weight: bold;
+    margin-top: 10%;
+
+    select {
+        font-size: $font-small;
+        width: $hundred-percent;
+        margin-top: 8%;
+        padding: 5%;
+    }
+}
+
+.Quantity {
+    margin-top: 10%;
+    font-size: $font-small;
+    width: 30%;
+    padding: 4%;
+    margin-bottom: 5%;
+}
+
+.QuantLabel {
+    margin-top: 10%;
+    font-weight: bold;
+    font-size: $font-medium;
+}
+
+.AddToCart {
+    width: 103%;
+    padding: 3%;
+    background-color: $siteColor;
+    border: $color-white solid 1px;
+    font-size: $font-medium;
+    color: $color-white;
+}
